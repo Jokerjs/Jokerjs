@@ -1,0 +1,1 @@
+var posts=["2023/04/28/JavaScript-01/","2023/04/28/JavaScript-02/","2023/04/27/hexo-install/","2023/05/31/JavaScript-03/","2023/04/28/markdown-grammar/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};

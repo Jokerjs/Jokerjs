@@ -1,0 +1,1287 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JavaScript教程(二)-JavaScript基础语法 | 字号楼</title><meta name="keywords" content="JavaScript"><meta name="author" content="字号楼"><meta name="copyright" content="字号楼"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="JavaScript教程(二)-JavaScript基础语法"><meta name="application-name" content="JavaScript教程(二)-JavaScript基础语法"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="bookmark" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="192x192" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-icon" sizes="512x512" href="/img/siteicon/apple-touch-icon.png"><link rel="apple-touch-startup-image" media="screen and (device-width:320px) and (device-height:568px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1136x640.png"><link rel="apple-touch-startup-image" media="screen and (device-width:320px) and (device-height:568px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_640x1136.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2688x1242.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1792x828.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_1125x2436.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:896px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_828x1792.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:812px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2436x1125.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:736px) and (-webkit-device-pixel-ratio:3) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_1242x2208.png"><link rel="apple-touch-startup-image" media="screen and (device-width:414px) and (device-height:736px) and (-webkit-device-pixel-ratio:3) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2208x1242.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_1334x750.png"><link rel="apple-touch-startup-image" media="screen and (device-width:375px) and (device-height:667px) and (-webkit-device-pixel-ratio:2) and (orientation:portrait)" href="/img/siteicon/splashIcons/icon_750x1334.png"><link rel="apple-touch-startup-image" media="screen and (device-width:1024px) and (device-height:1366px) and (-webkit-device-pixel-ratio:2) and (orientation:landscape)" href="/img/siteicon/splashIcons/icon_2732x2048.png"><meta name="description" content="JavaScript基础语法变量和数据类型JavaScript的变量和数据类型是JavaScript中的基础知识。在JavaScript中，变量用于存储值，数据类型用于定义变量的类型。以下是JavaScript中的一些常见数据类型： 数字（Number）：整数或浮点数。例如：12var age &#x3D; 30;var price &#x3D; 9.99;  JavaScript不区分整数和浮点数，统一用Numbe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript教程(二)-JavaScript基础语法">
+<meta property="og:url" content="http://www.zihaolou.top/2023/04/28/JavaScript-02/index.html">
+<meta property="og:site_name" content="字号楼">
+<meta property="og:description" content="JavaScript基础语法变量和数据类型JavaScript的变量和数据类型是JavaScript中的基础知识。在JavaScript中，变量用于存储值，数据类型用于定义变量的类型。以下是JavaScript中的一些常见数据类型： 数字（Number）：整数或浮点数。例如：12var age &#x3D; 30;var price &#x3D; 9.99;  JavaScript不区分整数和浮点数，统一用Numbe">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.zihaolou.top/images/archives/javascript_bg.jpeg">
+<meta property="article:published_time" content="2023-04-28T06:37:45.000Z">
+<meta property="article:modified_time" content="2023-05-31T03:38:29.908Z">
+<meta property="article:author" content="字号楼">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.zihaolou.top/images/archives/javascript_bg.jpeg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://www.zihaolou.top/2023/04/28/JavaScript-02/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/@fancyapps/ui@4.0.31/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  navMusic: true,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#3b70fc","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JavaScript教程(二)-JavaScript基础语法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-05-31 11:38:29'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/"><div class="title">字号楼</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><center id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></center></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:17px;"><li><a class="site-page child faa-parent animated-hover" href="/movies/"><i class="fas fa-video faa-tada"></i><span> 电影</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="darkmode_navswitch"><a class="darkmode_switchbutton" type="button" href="javascript:void(0);" title="浅色和深色模式转换" onclick="rm.switchDarkMode()"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke" style="font-size: 1.3rem"></i></a></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JavaScript教程(二)-JavaScript基础语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-04-28T06:37:45.000Z" title="发表于 2023-04-28 14:37:45">2023-04-28</time><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-31T03:38:29.908Z" title="更新于 2023-05-31 11:38:29">2023-05-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/JavaScript/">JavaScript</a></span></div><div class="meta-secondline"></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/archives/javascript_bg.jpeg"></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="JavaScript基础语法"><a href="#JavaScript基础语法" class="headerlink" title="JavaScript基础语法"></a>JavaScript基础语法</h1><h2 id="变量和数据类型"><a href="#变量和数据类型" class="headerlink" title="变量和数据类型"></a>变量和数据类型</h2><p>JavaScript的变量和数据类型是JavaScript中的基础知识。在JavaScript中，变量用于存储值，数据类型用于定义变量的类型。以下是JavaScript中的一些常见数据类型：</p>
+<h3 id="数字（Number）：整数或浮点数。例如："><a href="#数字（Number）：整数或浮点数。例如：" class="headerlink" title="数字（Number）：整数或浮点数。例如："></a>数字（Number）：整数或浮点数。例如：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var age = 30;</span><br><span class="line">var price = 9.99;</span><br></pre></td></tr></table></figure>
+
+<p>JavaScript不区分整数和浮点数，统一用Number表示，以下都是合法的Number类型：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">123; // 整数123</span><br><span class="line">0.456; // 浮点数0.456</span><br><span class="line">1.2345e3; // 科学计数法表示1.2345x1000，等同于1234.5</span><br><span class="line">-99; // 负数</span><br><span class="line">NaN; // NaN表示Not a Number，当无法计算结果时用NaN表示</span><br><span class="line">Infinity; // Infinity表示无限大，当数值超过了JavaScript的Number所能表示的最大值时，就表示为Infinity</span><br></pre></td></tr></table></figure>
+<p>计算机由于使用二进制，所以，有时候用十六进制表示整数比较方便，十六进制用0x前缀和0-9，a-f表示，例如：0xff00，0xa5b4c3d2，等等，它们和十进制表示的数值完全一样。</p>
+<p>Number可以直接做四则运算，规则和数学一致：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 + 2; // 3</span><br><span class="line">(1 + 2) * 5 / 2; // 7.5</span><br><span class="line">2 / 0; // Infinity</span><br><span class="line">0 / 0; // NaN</span><br><span class="line">10 % 3; // 1</span><br><span class="line">10.5 % 3; // 1.5</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串（String）：由一系列字符组成的文本。例如："><a href="#字符串（String）：由一系列字符组成的文本。例如：" class="headerlink" title="字符串（String）：由一系列字符组成的文本。例如："></a>字符串（String）：由一系列字符组成的文本。例如：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var name = &quot;John&quot;;</span><br><span class="line">var message = &#x27;Hello World!&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>JavaScript字符串是一串Unicode字符序列，用于存储文本数据。字符串可以由单引号、双引号或反引号（ES6引入）包裹起来。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let str1 = &#x27;Hello world!&#x27;;</span><br><span class="line">let str2 = &quot;Hello world!&quot;;</span><br><span class="line">let str3 = `Hello world!`; // 反引号</span><br></pre></td></tr></table></figure>
+
+<h3 id="布尔值（Boolean）：表示真或假的值。例如："><a href="#布尔值（Boolean）：表示真或假的值。例如：" class="headerlink" title="布尔值（Boolean）：表示真或假的值。例如："></a>布尔值（Boolean）：表示真或假的值。例如：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var isMale = true;</span><br><span class="line">var isMarried = false;</span><br></pre></td></tr></table></figure>
+
+<p>JavaScript布尔值只有两种取值，即 true 和 false。通常用于控制程序流程，比如在条件语句中判断是否执行某个代码块。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let x = 10;</span><br><span class="line">if (x &gt; 5) &#123;</span><br><span class="line">    console.log(&#x27;x is greater than 5&#x27;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    console.log(&#x27;x is less than or equal to 5&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在JavaScript中，除了 true 和 false 以外，还有一些“假值”（falsy values），它们在条件语句中会被当作 false 处理，包括：</p>
+<ul>
+<li>undefined</li>
+<li>null</li>
+<li>false</li>
+<li>0</li>
+<li>-0</li>
+<li>NaN</li>
+<li>‘’（空字符串）</li>
+</ul>
+<p><strong>注意，由于JavaScript是一门弱类型语言，因此在某些情况下，布尔值会隐式转换为其他类型的值。例如：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">console.log(true + 1); // 2</span><br><span class="line">console.log(false + 1); // 1</span><br><span class="line">console.log(true + &#x27;hello&#x27;); // &#x27;truehello&#x27;</span><br><span class="line">console.log(false + &#x27;hello&#x27;); // &#x27;falsehello&#x27;</span><br></pre></td></tr></table></figure>
+<p>在这些情况下，布尔值会被转换为数字或字符串。</p>
+<h3 id="空值（Null）：表示没有值的变量。例如："><a href="#空值（Null）：表示没有值的变量。例如：" class="headerlink" title="空值（Null）：表示没有值的变量。例如："></a>空值（Null）：表示没有值的变量。例如：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var car = null;</span><br></pre></td></tr></table></figure>
+
+<p>在JavaScript中，null 是一个特殊的值，表示“空值”或“不存在的对象”。可以将 null 赋值给变量或属性，表示它们当前没有值。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let x = null;</span><br><span class="line">console.log(x); // null</span><br><span class="line"></span><br><span class="line">let person = &#123;</span><br><span class="line">name: &#x27;Alice&#x27;,</span><br><span class="line">age: null</span><br><span class="line">&#125;;</span><br><span class="line">console.log(person.age); // null</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>需要注意的是，null 是一个基本类型的值，不是对象。因此，它没有属性和方法，如果尝试访问 null 的属性或方法会导致 TypeError 错误。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let x = null;</span><br><span class="line">console.log(x.toString()); // TypeError: Cannot read property &#x27;toString&#x27; of null</span><br></pre></td></tr></table></figure>
+
+<p>另外需要注意的是，null 和 undefined 是不同的值，尽管它们都表示“没有值”。undefined 表示一个变量或属性未被赋值，而 null 表示一个变量或属性被显式地赋值为“空值”。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">let x;</span><br><span class="line">console.log(x); // undefined</span><br><span class="line"></span><br><span class="line">let person = &#123;</span><br><span class="line">    name: &#x27;Alice&#x27;,</span><br><span class="line">    age: undefined</span><br><span class="line">&#125;;</span><br><span class="line">console.log(person.age); // undefined</span><br></pre></td></tr></table></figure>
+
+<p>在实际开发中，通常使用 null 来表示一个变量或属性的初始值或默认值，或者表示一个函数或方法的返回值为“空”，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function findPerson(name) &#123;</span><br><span class="line">    if (name === &#x27;Alice&#x27;) &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            name: &#x27;Alice&#x27;,</span><br><span class="line">            age: 18</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        return null;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let person = findPerson(&#x27;Bob&#x27;);</span><br><span class="line">if (person === null) &#123;</span><br><span class="line">    console.log(&#x27;Person not found&#x27;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    console.log(`Person found: $&#123;person.name&#125;, $&#123;person.age&#125;`);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="未定义（Undefined）：表示未赋值的变量。例如："><a href="#未定义（Undefined）：表示未赋值的变量。例如：" class="headerlink" title="未定义（Undefined）：表示未赋值的变量。例如："></a>未定义（Undefined）：表示未赋值的变量。例如：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var x;</span><br></pre></td></tr></table></figure>
+<p>Undefined 在 JavaScript 中表示未定义或缺失的值，它是一个特殊的值，不同于 null。在条件判断中会被转换为 false。</p>
+<h3 id="对象（Object）：表示一组相关的数据和功能。例如："><a href="#对象（Object）：表示一组相关的数据和功能。例如：" class="headerlink" title="对象（Object）：表示一组相关的数据和功能。例如："></a>对象（Object）：表示一组相关的数据和功能。例如：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123; name: &quot;John&quot;, age: 30, city: &quot;New York&quot; &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>在 JavaScript 中，Object 是一个内置的数据类型，用于表示一组属性和方法的集合。在 JavaScript 中，几乎所有的值都是对象，包括原始类型值（如字符串、数字、布尔值等）和复杂类型值（如数组、函数、日期等）。</p>
+<p>Object 是一个构造函数，可以通过 new 操作符来创建一个新的对象实例。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var obj = new Object();</span><br></pre></td></tr></table></figure>
+
+<p>也可以使用对象字面量来创建一个新的对象实例。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    prop1: &#x27;value1&#x27;,</span><br><span class="line">    prop2: &#x27;value2&#x27;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>在 JavaScript 中，对象可以包含一组属性和方法。属性是一个名值对，其中名称是一个字符串，值可以是任何 JavaScript 值。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    prop1: &#x27;value1&#x27;,</span><br><span class="line">    prop2: 2,</span><br><span class="line">    prop3: true</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>方法是一个函数，它定义在对象的属性中。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    prop1: &#x27;value1&#x27;,</span><br><span class="line">    prop2: function() &#123;</span><br><span class="line">        console.log(&#x27;prop2 method&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可以使用点号（.）或方括号（[]）来访问对象的属性和方法。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">    prop1: &#x27;value1&#x27;,</span><br><span class="line">    prop2: function() &#123;</span><br><span class="line">        console.log(&#x27;prop2 method&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(obj.prop1); // 输出：value1</span><br><span class="line">obj.prop2(); // 输出：prop2 method</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，在 JavaScript 中，对象是引用类型，也就是说，当你将一个对象赋值给另一个变量时，实际上是将对象的引用复制给了该变量。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var obj1 = &#123; prop: &#x27;value&#x27; &#125;;</span><br><span class="line">var obj2 = obj1;</span><br><span class="line"></span><br><span class="line">obj2.prop = &#x27;new value&#x27;;</span><br><span class="line"></span><br><span class="line">console.log(obj1.prop); // 输出：new value</span><br></pre></td></tr></table></figure>
+
+<p>在上面的例子中，当你修改 obj2 的属性时，实际上是修改了 obj1 的属性，因为它们引用同一个对象。</p>
+<p>总之，Object 是 JavaScript 中的一个内置数据类型，用于表示一组属性和方法的集合。可以通过 new 操作符或对象字面量来创建一个新的对象实例。对象可以包含一组属性和方法，可以使用点号或方括号来访问对象的属性和方法。对象是引用类型，在赋值时会复制对象的引用。</p>
+<h3 id="数组（Array）：表示按顺序排列的一组值。例如："><a href="#数组（Array）：表示按顺序排列的一组值。例如：" class="headerlink" title="数组（Array）：表示按顺序排列的一组值。例如："></a>数组（Array）：表示按顺序排列的一组值。例如：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;orange&quot;];</span><br></pre></td></tr></table></figure>
+
+<p>JavaScript的Array可以包含任意数据类型，并通过索引来访问每个元素。</p>
+<p>要取得Array的长度，直接访问length属性：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3.14, &#x27;Hello&#x27;, null, true];</span><br><span class="line">arr.length; // 6</span><br></pre></td></tr></table></figure>
+
+<p><strong>请注意</strong>，直接给Array的length赋一个新的值会导致Array大小的变化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3];</span><br><span class="line">arr.length; // 3</span><br><span class="line">arr.length = 6;</span><br><span class="line">arr; // arr变为[1, 2, 3, undefined, undefined, undefined]</span><br><span class="line">arr.length = 2;</span><br><span class="line">arr; // arr变为[1, 2]</span><br></pre></td></tr></table></figure>
+
+<p>Array可以通过索引把对应的元素修改为新的值，因此，对Array的索引进行赋值会直接修改这个Array：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;];</span><br><span class="line">arr[1] = 99;</span><br><span class="line">arr; // arr现在变为[&#x27;A&#x27;, 99, &#x27;C&#x27;]</span><br></pre></td></tr></table></figure>
+
+<p><strong>请注意</strong>，如果通过索引赋值时，索引超过了范围，同样会引起Array大小的变化：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3];</span><br><span class="line">arr[5] = &#x27;x&#x27;;</span><br><span class="line">arr; // arr变为[1, 2, 3, undefined, undefined, &#x27;x&#x27;]</span><br></pre></td></tr></table></figure>
+
+<p>大多数其他编程语言不允许直接改变数组的大小，越界访问索引会报错。然而，JavaScript的Array却不会有任何错误。在编写代码时，不建议直接修改Array的大小，访问索引时要确保索引不会越界。</p>
+<h4 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h4><p>与String类似，Array也可以通过indexOf()来搜索一个指定的元素的位置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [10, 20, &#x27;30&#x27;, &#x27;xyz&#x27;];</span><br><span class="line">arr.indexOf(10); // 元素10的索引为0</span><br><span class="line">arr.indexOf(20); // 元素20的索引为1</span><br><span class="line">arr.indexOf(30); // 元素30没有找到，返回-1</span><br><span class="line">arr.indexOf(&#x27;30&#x27;); // 元素&#x27;30&#x27;的索引为2</span><br></pre></td></tr></table></figure>
+<p>注意了，数字30和字符串’30’是不同的元素。</p>
+<h4 id="push和pop"><a href="#push和pop" class="headerlink" title="push和pop"></a>push和pop</h4><p>push()向Array的末尾添加若干元素，pop()则把Array的最后一个元素删除掉：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2];</span><br><span class="line">arr.push(&#x27;A&#x27;, &#x27;B&#x27;); // 返回Array新的长度: 4</span><br><span class="line">arr; // [1, 2, &#x27;A&#x27;, &#x27;B&#x27;]</span><br><span class="line">arr.pop(); // pop()返回&#x27;B&#x27;</span><br><span class="line">arr; // [1, 2, &#x27;A&#x27;]</span><br><span class="line">arr.pop(); arr.pop(); arr.pop(); // 连续pop 3次</span><br><span class="line">arr; // []</span><br><span class="line">arr.pop(); // 空数组继续pop不会报错，而是返回undefined</span><br><span class="line">arr; // []</span><br></pre></td></tr></table></figure>
+
+<h4 id="unshift和shift"><a href="#unshift和shift" class="headerlink" title="unshift和shift"></a>unshift和shift</h4><p>如果要往Array的头部添加若干元素，使用unshift()方法，shift()方法则把Array的第一个元素删掉：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2];</span><br><span class="line">arr.unshift(&#x27;A&#x27;, &#x27;B&#x27;); // 返回Array新的长度: 4</span><br><span class="line">arr; // [&#x27;A&#x27;, &#x27;B&#x27;, 1, 2]</span><br><span class="line">arr.shift(); // &#x27;A&#x27;</span><br><span class="line">arr; // [&#x27;B&#x27;, 1, 2]</span><br><span class="line">arr.shift(); arr.shift(); arr.shift(); // 连续shift 3次</span><br><span class="line">arr; // []</span><br><span class="line">arr.shift(); // 空数组继续shift不会报错，而是返回undefined</span><br><span class="line">arr; // []</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h4><p>sort()可以对当前Array进行排序，它会直接修改当前Array的元素位置，直接调用时，按照默认顺序排序：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&#x27;B&#x27;, &#x27;C&#x27;, &#x27;A&#x27;];</span><br><span class="line">arr.sort();</span><br><span class="line">arr; // [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;]</span><br></pre></td></tr></table></figure>
+<p>能否按照我们自己指定的顺序排序呢？完全可以，我们将在后面的函数中讲到。</p>
+<h4 id="reverse"><a href="#reverse" class="headerlink" title="reverse"></a>reverse</h4><p>reverse()把整个Array的元素给调个个，也就是反转：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&#x27;one&#x27;, &#x27;two&#x27;, &#x27;three&#x27;];</span><br><span class="line">arr.reverse(); </span><br><span class="line">arr; // [&#x27;three&#x27;, &#x27;two&#x27;, &#x27;one&#x27;]</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="splice"><a href="#splice" class="headerlink" title="splice"></a>splice</h4><p>splice()方法是修改Array的“万能方法”，它可以从指定的索引开始删除若干元素，然后再从该位置添加若干元素：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&#x27;Microsoft&#x27;, &#x27;Apple&#x27;, &#x27;Yahoo&#x27;, &#x27;AOL&#x27;, &#x27;Excite&#x27;, &#x27;Oracle&#x27;];</span><br><span class="line">// 从索引2开始删除3个元素,然后再添加两个元素:</span><br><span class="line">arr.splice(2, 3, &#x27;Google&#x27;, &#x27;Facebook&#x27;); // 返回删除的元素 [&#x27;Yahoo&#x27;, &#x27;AOL&#x27;, &#x27;Excite&#x27;]</span><br><span class="line">arr; // [&#x27;Microsoft&#x27;, &#x27;Apple&#x27;, &#x27;Google&#x27;, &#x27;Facebook&#x27;, &#x27;Oracle&#x27;]</span><br><span class="line">// 只删除,不添加:</span><br><span class="line">arr.splice(2, 2); // [&#x27;Google&#x27;, &#x27;Facebook&#x27;]</span><br><span class="line">arr; // [&#x27;Microsoft&#x27;, &#x27;Apple&#x27;, &#x27;Oracle&#x27;]</span><br><span class="line">// 只添加,不删除:</span><br><span class="line">arr.splice(2, 0, &#x27;Google&#x27;, &#x27;Facebook&#x27;); // 返回[],因为没有删除任何元素</span><br><span class="line">arr; // [&#x27;Microsoft&#x27;, &#x27;Apple&#x27;, &#x27;Google&#x27;, &#x27;Facebook&#x27;, &#x27;Oracle&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h4><p>concat()方法把当前的Array和另一个Array连接起来，并返回一个新的Array：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;];</span><br><span class="line">var added = arr.concat([1, 2, 3]);</span><br><span class="line">added; // [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;, 1, 2, 3]</span><br><span class="line">arr; // [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;]</span><br></pre></td></tr></table></figure>
+
+<p><strong>请注意</strong>，concat()方法并没有修改当前Array，而是返回了一个新的Array。</p>
+<p>实际上，concat()方法可以接收任意个元素和Array，并且自动把Array拆开，然后全部添加到新的Array里：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;];</span><br><span class="line">arr.concat(1, 2, [3, 4]); // [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;, 1, 2, 3, 4]</span><br></pre></td></tr></table></figure>
+
+<h4 id="join"><a href="#join" class="headerlink" title="join"></a>join</h4><p>join()方法是一个非常实用的方法，它把当前Array的每个元素都用指定的字符串连接起来，然后返回连接后的字符串：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&#x27;A&#x27;, &#x27;B&#x27;, &#x27;C&#x27;, 1, 2, 3];</span><br><span class="line">arr.join(&#x27;-&#x27;); // &#x27;A-B-C-1-2-3&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>如果Array的元素不是字符串，将自动转换为字符串后再连接。</p>
+<h4 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h4><p>如果数组的某个元素又是一个Array，则可以形成多维数组，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var arr = [[1, 2, 3], [400, 500, 600], &#x27;-&#x27;];</span><br></pre></td></tr></table></figure>
+
+<p>上述Array包含3个元素，其中头两个元素本身也是Array。</p>
+<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><p>JavaScript中的运算符可以分为以下几类：</p>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+</td>
+<td>加法</td>
+<td><code>3 + 5 = 8</code></td>
+</tr>
+<tr>
+<td>-</td>
+<td>减法</td>
+<td><code>5 - 3 = 2</code></td>
+</tr>
+<tr>
+<td>*</td>
+<td>乘法</td>
+<td><code>3 * 5 = 15</code></td>
+</tr>
+<tr>
+<td>&#x2F;</td>
+<td>除法</td>
+<td><code>15 / 5 = 3</code></td>
+</tr>
+<tr>
+<td>%</td>
+<td>取模（余数）</td>
+<td><code>15 % 4 = 3</code></td>
+</tr>
+<tr>
+<td>++</td>
+<td>自增</td>
+<td><code>let x = 5; x++; // x 现在为 6</code></td>
+</tr>
+<tr>
+<td>–</td>
+<td>自减</td>
+<td><code>let x = 5; x--; // x 现在为 4</code></td>
+</tr>
+<tr>
+<td>&#x3D;</td>
+<td>赋值</td>
+<td><code>let x = 5;</code></td>
+</tr>
+<tr>
+<td>+&#x3D;</td>
+<td>加赋值</td>
+<td><code>let x = 5; x += 3; // x 现在为 8</code></td>
+</tr>
+<tr>
+<td>-&#x3D;</td>
+<td>减赋值</td>
+<td><code>let x = 5; x -= 3; // x 现在为 2</code></td>
+</tr>
+<tr>
+<td>*&#x3D;</td>
+<td>乘赋值</td>
+<td><code>let x = 5; x *= 3; // x 现在为 15</code></td>
+</tr>
+<tr>
+<td>&#x2F;&#x3D;</td>
+<td>除赋值</td>
+<td><code>let x = 15; x /= 5; // x 现在为 3</code></td>
+</tr>
+<tr>
+<td>%&#x3D;</td>
+<td>取模赋值</td>
+<td><code>let x = 15; x %= 4; // x 现在为 3</code></td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>左移</td>
+<td><code>5 &lt;&lt; 1 = 10</code></td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>右移</td>
+<td><code>5 &gt;&gt; 1 = 2</code></td>
+</tr>
+<tr>
+<td>&gt;&gt;&gt;</td>
+<td>无符号右移</td>
+<td><code>-5 &gt;&gt;&gt; 1 = 2147483645</code></td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>按位与</td>
+<td><code>5 &amp; 3 = 1</code></td>
+</tr>
+<tr>
+<td>|</td>
+<td>按位或</td>
+<td><code>5 | 3 = 7</code></td>
+</tr>
+<tr>
+<td>^</td>
+<td>按位异或</td>
+<td><code>5 ^ 3 = 6</code></td>
+</tr>
+<tr>
+<td>~</td>
+<td>取反</td>
+<td><code>~5 = -6</code></td>
+</tr>
+<tr>
+<td>instanceof</td>
+<td>判断对象是否为指定类型</td>
+<td><code>let arr = [1, 2, 3]; arr instanceof Array; // true</code></td>
+</tr>
+</tbody></table>
+<h2 id="控制语句"><a href="#控制语句" class="headerlink" title="控制语句"></a>控制语句</h2><h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><p>条件语句用于根据条件执行不同的代码块，常用的条件语句有 if、else、else if 和 switch。</p>
+<h4 id="if-语句"><a href="#if-语句" class="headerlink" title="if 语句"></a>if 语句</h4><p>‘if’ 语句用于在满足条件时执行一段代码块，如果条件不满足则不执行。if 语句的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">if (condition) &#123;</span><br><span class="line">    // 执行代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果需要在不满足条件时执行另一段代码块，可以使用 else 语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (condition) &#123;</span><br><span class="line">    // 执行代码块</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    // 执行另一个代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="else-if-语句"><a href="#else-if-语句" class="headerlink" title="else if 语句"></a>else if 语句</h4><p>‘else if’ 语句用于在满足多个条件时执行不同的代码块，它可以和 if 语句和 else 语句组合使用。else if 语句的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if (condition1) &#123;</span><br><span class="line">    // 执行代码块1</span><br><span class="line">&#125; else if (condition2) &#123;</span><br><span class="line">    // 执行代码块2</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    // 执行代码块3</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="switch-语句"><a href="#switch-语句" class="headerlink" title="switch 语句"></a>switch 语句</h4><p>‘switch’ 语句用于在满足不同的条件时执行不同的代码块，它适用于多个条件的情况。switch 语句的语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">switch (expression) &#123;</span><br><span class="line">  case value1:</span><br><span class="line">    // 执行代码块1</span><br><span class="line">    break;</span><br><span class="line">  case value2:</span><br><span class="line">    // 执行代码块2</span><br><span class="line">    break;</span><br><span class="line">  default:</span><br><span class="line">    // 执行代码块3</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><p>循环语句用于重复执行一段代码块，常用的循环语句有 for、while 和 do while。</p>
+<h4 id="while-循环"><a href="#while-循环" class="headerlink" title="while 循环"></a>while 循环</h4><p>‘while’ 循环用于在满足条件时重复执行一段代码块，其语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while (condition) &#123;</span><br><span class="line">    // 执行代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="do-while-循环"><a href="#do-while-循环" class="headerlink" title="do while 循环"></a>do while 循环</h4><p>‘do while’ 循环用于在满足条件时重复执行一段代码块，与 while 循环不同的是，<br>‘do while’ 循环会先执行一次代码块，再判断条件是否满足。其语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">do &#123;</span><br><span class="line">// 执行代码块</span><br><span class="line">&#125; while (condition);</span><br></pre></td></tr></table></figure>
+
+<h4 id="for-循环"><a href="#for-循环" class="headerlink" title="for 循环"></a>for 循环</h4><p>for 循环用于在满足条件时重复执行一段代码块，其语法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (initialization; condition; increment) &#123;</span><br><span class="line">  // 执行代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中 ‘initialization’ 表示循环开始前的初始化语句，condition 表示循环执行的条件，increment 表示每次循环后执行的语句。</p>
+<p>示例代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 1; i &lt;= 10; i++) &#123;</span><br><span class="line">    document.write(i + &quot; &quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for in循环"></a>for in循环</h4><p>JS for in 循环是一种特殊类型的循环，也是普通 for 循环的变体，主要用来遍历对象，使用它可以将对象中的属性依次循环出来，其语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (variable in object) &#123;</span><br><span class="line">    // 要执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中，variable 为一个变量，每次循环时这个变量都会被赋予不同的值，我们可以在{ }中使用这个变量来进行一系列操作；object 为要遍历的对象，在每次循环中，会将 object 对象中的一个属性的键赋值给变量 variable，直到对象中的所有属性都遍历完。</p>
+<p>JS for in 循环示例代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 定义一个对象</span><br><span class="line">var person = &#123;&quot;name&quot;: &quot;Clark&quot;, &quot;surname&quot;: &quot;Kent&quot;, &quot;age&quot;: &quot;36&quot;&#125;;</span><br><span class="line"></span><br><span class="line">// 遍历对象中的所有属性</span><br><span class="line">for(var prop in person) &#123;</span><br><span class="line">    document.write(&quot;&lt;p&gt;&quot; + prop + &quot; = &quot; + person[prop] + &quot;&lt;/p&gt;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<pre><code>name = Clark
+surname = Kent
+age = 36
+</code></pre>
+<p>注意，JS for in 循环是为遍历对象而创建的，虽然也可以遍历数组，但是并不推荐，若要遍历数组，可以使用 for 循环或者 for of 循环，有关 for of 循环我们会在下节进行介绍。</p>
+<h4 id="for-of循环"><a href="#for-of循环" class="headerlink" title="for of循环"></a>for of循环</h4><p>JS for of 循环是 ECMAScript6 中新添加的一个循环方式，与 for in 循环类似，也是普通 for 循环的一种变体。使用 for of 循环可以轻松的遍历数组或者其它可遍历的对象，例如字符串、对象等。</p>
+<p>JS for of 循环的语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (variable of iterable) &#123;</span><br><span class="line">    // 要执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中，variable 为一个变量，每次循环时这个变量都会被赋予不同的值，我们可以在后面的{ }中使用这个变量来进行一系列操作；iterable 为要遍历的内容，在每次循环中，会将 iterable 中的一个值赋值给变量 variable，直到 iterable 中的所有值都遍历完。</p>
+<p>示例代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 定义一个数组</span><br><span class="line">var arr = [&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;, &#x27;d&#x27;, &#x27;e&#x27;, &#x27;f&#x27;];</span><br><span class="line">// 使用 for of 循环遍历数组中的每个元素</span><br><span class="line">for (var value of arr) &#123;</span><br><span class="line">    document.write(value + &quot;, &quot;);</span><br><span class="line">&#125;</span><br><span class="line">document.write(&quot;&lt;br&gt;&quot;);</span><br><span class="line"></span><br><span class="line">// 定义一个字符串</span><br><span class="line">var str = &quot;Hello World!&quot;;</span><br><span class="line">// 使用 for of 循环遍历字符串中的每个字符</span><br><span class="line">for (var value of str) &#123;</span><br><span class="line">    document.write(value + &quot;, &quot;);</span><br><span class="line">&#125;</span><br><span class="line">document.write(&quot;&lt;br&gt;&quot;);</span><br><span class="line"></span><br><span class="line">// 定义一个对象</span><br><span class="line">var obj = &#123;&quot;name&quot;: &quot;Clark&quot;, &quot;surname&quot;: &quot;Kent&quot;, &quot;age&quot;: &quot;36&quot;&#125;;</span><br><span class="line">// 使用 for of 循环遍历对象中的所有属性</span><br><span class="line">for(var value in obj) &#123;</span><br><span class="line">    document.write(value + &quot;, &quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<pre><code>a, b, c, d, e, f,
+H, e, l, l, o, , W, o, r, l, d, !,
+name, surname, age,
+</code></pre>
+<p>注意，虽然 for of 循环也可以遍历对象，但并不推荐，若要遍历对象可以使用 for in 循环。</p>
+<h4 id="跳出循环"><a href="#跳出循环" class="headerlink" title="跳出循环"></a>跳出循环</h4><h5 id="JS-break-语句"><a href="#JS-break-语句" class="headerlink" title="JS break 语句"></a>JS break 语句</h5><p>在学习《JS switch case语句》时我们已经简单了解过了 break 语句，使用 break 语句可以跳出 switch 语句。其实使用 break 语句还可以用来跳出循环，让程序继续执行循环之后的代码（如果有的话）。</p>
+<p>【示例】使用 break 语句跳出 for 循环：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">    if(i == 5) &#123;</span><br><span class="line">        break;</span><br><span class="line">    &#125;</span><br><span class="line">    document.write(&quot;i = &quot; + i + &quot;&lt;br&gt;&quot;);</span><br><span class="line">&#125;</span><br><span class="line">document.write(&quot;循环之外的代码&quot;);</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<pre><code>i = 0
+i = 1
+i = 2
+i = 3
+i = 4
+循环之外的代码
+</code></pre>
+<h5 id="JS-continue-语句"><a href="#JS-continue-语句" class="headerlink" title="JS continue 语句"></a>JS continue 语句</h5><p>continue 语句用来跳过本次循环，执行下次循环。当遇到 continue 语句时，程序会立即重新检测条件表达式，如果表达式结果为真则开始下次循环，如果表达式结果为假则退出循环。</p>
+<p>break 语句用来跳出整个循环，执行循环后面的代码；continue 语句用来跳过当次循环，继续执行下次循环。</p>
+<p>【示例】使用 continue 语句跳出 for 循环：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">for (var i = 0; i &lt; 10; i++) &#123;</span><br><span class="line">    if(i % 2 == 0) &#123;</span><br><span class="line">        continue;</span><br><span class="line">    &#125;</span><br><span class="line">    document.write(i + &quot;&amp;nbsp;&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<pre><code>1 3 5 7 9
+</code></pre>
+<h5 id="JavaScript-标签"><a href="#JavaScript-标签" class="headerlink" title="JavaScript 标签"></a>JavaScript 标签</h5><p>从 JavaScript 1.2 开始，可以将标签与 break 和 continue 结合使用，来更精确的控制程序的执行。</p>
+<p>JavaScript 中的标签与 HTML 中的标签不同，JavaScript 中的标签就是一个标识符（类似变量名），后面跟随一个冒号:。JavaScript 标签可以声明在任何语句或者代码块之前，并与 break 或 continue 配合来跳出特定的循环，例如当多个循环嵌套使用时，单纯使用 break 只能跳出当前的循环，无法跳出外层循环，如果将 break 与标签配合使用，则可以一次跳出多层循环。</p>
+<p>示例代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">document.write(&quot;开始循环!&lt;br /&gt; &quot;);</span><br><span class="line">outerloop:          // 定义一个标签    </span><br><span class="line">for (var i = 0; i &lt; 5; i++) &#123;</span><br><span class="line">   document.write(&quot;外层循环: &quot; + i + &quot;&lt;br /&gt;&quot;);</span><br><span class="line">   innerloop:       // 定义一个标签</span><br><span class="line">   for (var j = 0; j &lt; 5; j++) &#123;</span><br><span class="line">      if (j &gt; 3 ) break ;           // 跳出内层循环</span><br><span class="line">      if (i == 2) break innerloop;  // 跳出内层讯息</span><br><span class="line">      if (i == 4) break outerloop;  // 跳出外层循环</span><br><span class="line">      document.write(&quot;内层循环: &quot; + j + &quot; &lt;br /&gt;&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;      </span><br><span class="line">document.write(&quot;循环结束!&lt;br /&gt; &quot;);</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<pre><code>开始循环!
+外层循环: 0
+内层循环: 0
+内层循环: 1
+内层循环: 2
+内层循环: 3
+外层循环: 1
+内层循环: 0
+内层循环: 1
+内层循环: 2
+内层循环: 3
+外层循环: 2
+外层循环: 3
+内层循环: 0
+内层循环: 1
+内层循环: 2
+内层循环: 3
+外层循环: 4
+循环结束!
+</code></pre>
+<p>注意：break 或 continue 与标签之间不能出现换行。另外，标签名称和相关循环之间不能出现其它代码。</p>
+<p>以上是 JavaScript 控制语句的简要介绍，掌握这些语句可以让你更好地控制程序的流程和执行顺序。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数是一组执行特定任务（具有特定功能）的，可以重复使用的代码块，前面几节中用到的 alert()、write() 就是 JavaScript 中内置的函数。</p>
+<p>除了使用内置函数外，我们也可以自行创建函数（自定义函数），然后在需要的地方调用这个函数，这样不仅可以避免编写重复的代码，还有利于代码的后期维护。本节我们主要来介绍一下如何使用 JavaScript 编写一个自己的函数。</p>
+<h3 id="JS-定义函数"><a href="#JS-定义函数" class="headerlink" title="JS 定义函数"></a>JS 定义函数</h3><p>JS 函数声明需要以 function 关键字开头，之后为要创建的函数名称，function 关键字与函数名称之间使用空格分开，函数名之后为一个括号( )，括号中用来定义函数中要使用的参数（多个参数之间使用逗号,分隔开），一个函数最多可以有 255 个参数，最后为一个花括号{ }，花括号中用来定义函数的函数体（即实现函数的代码），如下所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function functionName(parameter_list) &#123;</span><br><span class="line">    // 函数中的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function sayHello(name)&#123;</span><br><span class="line">    document.write(&quot;Hello &quot; + name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面示例中定义了一个函数 sayHello()，该函数需要接收一个参数 name，调用该函数会在页面中输出“Hello …”。</p>
+<h3 id="JS-调用函数"><a href="#JS-调用函数" class="headerlink" title="JS 调用函数"></a>JS 调用函数</h3><p>一旦定义好了一个函数，我们就可以在当前文档的任意位置来调用它。调用函数非常简单，只需要函数名后面加上一个括号即可，例如 alert()、write()。注意，如果在定义函数时函数名后面的括号中指定了参数，那么在调用函数时也需要在括号中提供对应的参数。</p>
+<p>示例代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function sayHello(name)&#123;</span><br><span class="line">    document.write(&quot;Hello &quot; + name);</span><br><span class="line">&#125;</span><br><span class="line">// 调用 sayHello() 函数</span><br><span class="line">sayHello(&#x27;C语言中文网&#x27;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>提示：JavaScript 对于大小写敏感，所以在定义函数时 function 关键字一定要使用小写，而且调用函数时必须使用与声明时相同的大小写来调用函数。</p>
+</blockquote>
+<h3 id="参数的默认值"><a href="#参数的默认值" class="headerlink" title="参数的默认值"></a>参数的默认值</h3><p>在定义函数时，您可以为函数的参数设置一个默认值，这样当我们在调用这个函数时，如果没有提供参数，就会使用这个默认值作为参数值，如下例所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function sayHello(name = &quot;World&quot;)&#123;</span><br><span class="line">    document.write(&quot;Hello &quot; + name);</span><br><span class="line">&#125;</span><br><span class="line">sayHello();                 // 输出：Hello World</span><br><span class="line">sayHello(&#x27;c.biancheng.net&#x27;);     // 输出：Hello c.biancheng.net</span><br></pre></td></tr></table></figure>
+
+<h3 id="JS-函数返回值"><a href="#JS-函数返回值" class="headerlink" title="JS 函数返回值"></a>JS 函数返回值</h3><p>在函数中可以使用 return 语句将一个值（函数的运行结果）返回给调用函数的程序，这个值可以是任何类型，例如数组、对象、字符串等。对于有返回值的函数，我们可以会使用一个变量来接收这个函数的返回值，示例代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function getSum(num1, num2)&#123;</span><br><span class="line">    return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">var sum1 = getSum(7, 12);      // 函数返回值为：19</span><br><span class="line">var sum2 = getSum(-5, 33);     // 函数返回值为：28</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>提示：return 语句通常在函数的末尾定义，当函数运行到 return 语句时会立即停止运行，并返回到调用函数的地方继续执行。</p>
+</blockquote>
+<p>另外，一个函数只能有一个返回值，若要返回多个值则，则可以将值放入一个数组中，然后返回这个数组即可，如下例所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function division(dividend, divisor)&#123;</span><br><span class="line">    var quotient = dividend / divisor;</span><br><span class="line">    var arr = [dividend, divisor, quotient]</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br><span class="line">var res = division(100, 4)</span><br><span class="line">document.write(res[0]);         // 输出：100</span><br><span class="line">document.write(res[1]);         // 输出：4</span><br><span class="line">document.write(res[2]);         // 输出：25</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="JS-函数表达式"><a href="#JS-函数表达式" class="headerlink" title="JS 函数表达式"></a>JS 函数表达式</h3><p>函数表达式与声明变量非常相似，是另外一种声明函数的形式，语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var myfunction = function name(parameter_list)&#123;</span><br><span class="line">    // 函数中的代码</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>参数说明如下：</p>
+<ol>
+<li>myfunction：变量名，可以通过它来调用等号之后的函数；</li>
+<li>name：函数名，可以省略（一般情况下我们也会将其省略），如果省略那么 该函数就会成为一个匿名函数；</li>
+<li>parameter_list：为参数列表，一个函数最多可以有 255 个参数。</li>
+</ol>
+<p>示例代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 函数声明</span><br><span class="line">function getSum(num1, num2) &#123;</span><br><span class="line">    var total = num1 + num2;</span><br><span class="line">    return total;</span><br><span class="line">&#125;</span><br><span class="line">// 函数表达式</span><br><span class="line">var getSum = function(num1, num2) &#123;</span><br><span class="line">    var total = num1 + num2;</span><br><span class="line">    return total;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>上面示例中的两个函数是等价的，它们的功能、返回值、调用方法都是相同的。</p>
+<blockquote>
+<p>注意：在函数声明中，不需要在右花括号后放置分号，但若使用函数表达式就应该在表达式的最后以分号结尾。</p>
+</blockquote>
+<p>函数声明和函数表达式虽然看起来非常相似，但它们的运行方式是不同的，如下例所示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">declaration();          // 输出: function declaration</span><br><span class="line">function declaration() &#123;</span><br><span class="line">    document.write(&quot;function declaration&quot;);</span><br><span class="line">&#125;</span><br><span class="line">expression();           // 报错：Uncaught TypeError: undefined is not a function</span><br><span class="line">var expression = function() &#123;</span><br><span class="line">    document.write(&quot;function expression&quot;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>如上例所示，如果函数表达式在定义之前被调用，会抛出异常（报错），但函数声明则可以成功运行。这是因为在程序执行前，JavaScript 会先对函数声明进行解析，因此无论是在函数声明前还是声明后调用函数都是可行的。而函数表达式则是将一个匿名函数赋值给一个变量，所以在程序还没有执行到该表达式之前，相当于函数还未定义，因此无法调用。</p>
+</article><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="/images/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src="/images/qrcode-weichat.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/images/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src="/images/qrcode-alipay.png" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul><a class="reward-main-btn" href="/about/" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://www.zihaolou.top/2023/04/28/JavaScript-02/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=JavaScript教程(二)-JavaScript基础语法&amp;url=http://www.zihaolou.top/2023/04/28/JavaScript-02/&amp;pic=/images/archives/javascript_bg.jpeg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/JavaScript/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>JavaScript<span class="tagsPageCount">3</span></a></div></div></div></div></div><div class="post-copyright"><i class="anzhiyufont anzhiyu-icon-copyright"></i><div class="post-copyright__author"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://www.zihaolou.top/2023/04/28/JavaScript-02/">原创</a><a class="post-copyright-title"><span>JavaScript教程(二)-JavaScript基础语法</span></a></div><div class="post-copyright-info-box"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"></span><a class="link" href="http://www.zihaolou.top">字号楼</a></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a class="link" href="http://www.zihaolou.top/2023/04/28/JavaScript-02/">http://www.zihaolou.top/2023/04/28/JavaScript-02/</a></span><span class="copy-button" onclick="rm.copyPageUrl()"><i class="anzhiyufont anzhiyu-icon-copy"></i></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.zihaolou.top" target="_blank">字号楼</a>！</span></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/04/28/JavaScript-01/"><img class="prev-cover" src="/images/archives/javascript_bg.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">JavaScript教程(一)-简介</div></div></a></div><div class="next-post pull-right"><a href="/2023/05/31/JavaScript-03/"><img class="next-cover" src="/images/archives/javascript_bg.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">JavaScript教程(三)-JavaScript高级语法</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2023/04/28/JavaScript-01/" title="JavaScript教程(一)-简介"><img class="cover" src="/images/archives/javascript_bg.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-04-28</div><div class="title">JavaScript教程(一)-简介</div></div></a></div><div><a href="/2023/05/31/JavaScript-03/" title="JavaScript教程(三)-JavaScript高级语法"><img class="cover" src="/images/archives/javascript_bg.jpeg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2023-05-31</div><div class="title">JavaScript教程(三)-JavaScript高级语法</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a></div><div class="comment-tips" id="comment-tips"><span>你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div></div></div><div class="comment-barrage"></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="author-info-top"> <div class="card-info-avatar"></div></div><div class="author-info__sayhi" id="author-info__sayhi"></div><h1 class="author-info__name">字号楼</h1><div class="author-info__description"><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div></div><div class="banner-button-group"><a class="banner-button" onclick="pjax.loadUrl(&quot;/about/&quot;)"><span class="banner-button-text">了解更多</span><i class="anzhiyufont anzhiyu-icon-arrow-circle-right" style="font-size: 1.5rem"></i></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">JavaScript基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.1.</span> <span class="toc-text">变量和数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E5%AD%97%EF%BC%88Number%EF%BC%89%EF%BC%9A%E6%95%B4%E6%95%B0%E6%88%96%E6%B5%AE%E7%82%B9%E6%95%B0%E3%80%82%E4%BE%8B%E5%A6%82%EF%BC%9A"><span class="toc-number">1.1.1.</span> <span class="toc-text">数字（Number）：整数或浮点数。例如：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88String%EF%BC%89%EF%BC%9A%E7%94%B1%E4%B8%80%E7%B3%BB%E5%88%97%E5%AD%97%E7%AC%A6%E7%BB%84%E6%88%90%E7%9A%84%E6%96%87%E6%9C%AC%E3%80%82%E4%BE%8B%E5%A6%82%EF%BC%9A"><span class="toc-number">1.1.2.</span> <span class="toc-text">字符串（String）：由一系列字符组成的文本。例如：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%80%BC%EF%BC%88Boolean%EF%BC%89%EF%BC%9A%E8%A1%A8%E7%A4%BA%E7%9C%9F%E6%88%96%E5%81%87%E7%9A%84%E5%80%BC%E3%80%82%E4%BE%8B%E5%A6%82%EF%BC%9A"><span class="toc-number">1.1.3.</span> <span class="toc-text">布尔值（Boolean）：表示真或假的值。例如：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E5%80%BC%EF%BC%88Null%EF%BC%89%EF%BC%9A%E8%A1%A8%E7%A4%BA%E6%B2%A1%E6%9C%89%E5%80%BC%E7%9A%84%E5%8F%98%E9%87%8F%E3%80%82%E4%BE%8B%E5%A6%82%EF%BC%9A"><span class="toc-number">1.1.4.</span> <span class="toc-text">空值（Null）：表示没有值的变量。例如：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AA%E5%AE%9A%E4%B9%89%EF%BC%88Undefined%EF%BC%89%EF%BC%9A%E8%A1%A8%E7%A4%BA%E6%9C%AA%E8%B5%8B%E5%80%BC%E7%9A%84%E5%8F%98%E9%87%8F%E3%80%82%E4%BE%8B%E5%A6%82%EF%BC%9A"><span class="toc-number">1.1.5.</span> <span class="toc-text">未定义（Undefined）：表示未赋值的变量。例如：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%88Object%EF%BC%89%EF%BC%9A%E8%A1%A8%E7%A4%BA%E4%B8%80%E7%BB%84%E7%9B%B8%E5%85%B3%E7%9A%84%E6%95%B0%E6%8D%AE%E5%92%8C%E5%8A%9F%E8%83%BD%E3%80%82%E4%BE%8B%E5%A6%82%EF%BC%9A"><span class="toc-number">1.1.6.</span> <span class="toc-text">对象（Object）：表示一组相关的数据和功能。例如：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%EF%BC%88Array%EF%BC%89%EF%BC%9A%E8%A1%A8%E7%A4%BA%E6%8C%89%E9%A1%BA%E5%BA%8F%E6%8E%92%E5%88%97%E7%9A%84%E4%B8%80%E7%BB%84%E5%80%BC%E3%80%82%E4%BE%8B%E5%A6%82%EF%BC%9A"><span class="toc-number">1.1.7.</span> <span class="toc-text">数组（Array）：表示按顺序排列的一组值。例如：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#indexOf"><span class="toc-number">1.1.7.1.</span> <span class="toc-text">indexOf</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#push%E5%92%8Cpop"><span class="toc-number">1.1.7.2.</span> <span class="toc-text">push和pop</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#unshift%E5%92%8Cshift"><span class="toc-number">1.1.7.3.</span> <span class="toc-text">unshift和shift</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sort"><span class="toc-number">1.1.7.4.</span> <span class="toc-text">sort</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#reverse"><span class="toc-number">1.1.7.5.</span> <span class="toc-text">reverse</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#splice"><span class="toc-number">1.1.7.6.</span> <span class="toc-text">splice</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#concat"><span class="toc-number">1.1.7.7.</span> <span class="toc-text">concat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#join"><span class="toc-number">1.1.7.8.</span> <span class="toc-text">join</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84"><span class="toc-number">1.1.7.9.</span> <span class="toc-text">多维数组</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.</span> <span class="toc-text">控制语句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.1.</span> <span class="toc-text">条件语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#if-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.1.1.</span> <span class="toc-text">if 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#else-if-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.1.2.</span> <span class="toc-text">else if 语句</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#switch-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.1.3.</span> <span class="toc-text">switch 语句</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.2.</span> <span class="toc-text">循环语句</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#while-%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.3.2.1.</span> <span class="toc-text">while 循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#do-while-%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.3.2.2.</span> <span class="toc-text">do while 循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#for-%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.3.2.3.</span> <span class="toc-text">for 循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#for-in%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.3.2.4.</span> <span class="toc-text">for in循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#for-of%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.3.2.5.</span> <span class="toc-text">for of循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%B3%E5%87%BA%E5%BE%AA%E7%8E%AF"><span class="toc-number">1.3.2.6.</span> <span class="toc-text">跳出循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#JS-break-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.2.6.1.</span> <span class="toc-text">JS break 语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JS-continue-%E8%AF%AD%E5%8F%A5"><span class="toc-number">1.3.2.6.2.</span> <span class="toc-text">JS continue 语句</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#JavaScript-%E6%A0%87%E7%AD%BE"><span class="toc-number">1.3.2.6.3.</span> <span class="toc-text">JavaScript 标签</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.1.</span> <span class="toc-text">JS 定义函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-%E8%B0%83%E7%94%A8%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.2.</span> <span class="toc-text">JS 调用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC"><span class="toc-number">1.4.3.</span> <span class="toc-text">参数的默认值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E5%80%BC"><span class="toc-number">1.4.4.</span> <span class="toc-text">JS 函数返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JS-%E5%87%BD%E6%95%B0%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">1.4.5.</span> <span class="toc-text">JS 函数表达式</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/05/31/JavaScript-03/" title="JavaScript教程(三)-JavaScript高级语法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/archives/javascript_bg.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript教程(三)-JavaScript高级语法"/></a><div class="content"><a class="title" href="/2023/05/31/JavaScript-03/" title="JavaScript教程(三)-JavaScript高级语法">JavaScript教程(三)-JavaScript高级语法</a><time datetime="2023-05-31T03:40:22.000Z" title="发表于 2023-05-31 11:40:22">2023-05-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/28/JavaScript-02/" title="JavaScript教程(二)-JavaScript基础语法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/archives/javascript_bg.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript教程(二)-JavaScript基础语法"/></a><div class="content"><a class="title" href="/2023/04/28/JavaScript-02/" title="JavaScript教程(二)-JavaScript基础语法">JavaScript教程(二)-JavaScript基础语法</a><time datetime="2023-04-28T06:37:45.000Z" title="发表于 2023-04-28 14:37:45">2023-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/28/JavaScript-01/" title="JavaScript教程(一)-简介"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/archives/javascript_bg.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JavaScript教程(一)-简介"/></a><div class="content"><a class="title" href="/2023/04/28/JavaScript-01/" title="JavaScript教程(一)-简介">JavaScript教程(一)-简介</a><time datetime="2023-04-28T06:20:25.000Z" title="发表于 2023-04-28 14:20:25">2023-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/28/markdown-grammar/" title="markdown 语法"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/archives/Snipaste_2023-04-12_16-36-06.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="markdown 语法"/></a><div class="content"><a class="title" href="/2023/04/28/markdown-grammar/" title="markdown 语法">markdown 语法</a><time datetime="2023-04-28T04:30:12.000Z" title="发表于 2023-04-28 12:30:12">2023-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/27/hexo-install/" title="Hexo安装教程"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/archives/Snipaste_2023-04-12_16-14-55.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hexo安装教程"/></a><div class="content"><a class="title" href="/2023/04/27/hexo-install/" title="Hexo安装教程">Hexo安装教程</a><time datetime="2023-04-27T04:11:56.000Z" title="发表于 2023-04-27 12:11:56">2023-04-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By 字号楼</div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" data-title="博客框架为Hexo_v5.4.0" title="博客框架为Hexo_v5.4.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg" alt="博客框架为Hexo_v5.4.0"/></a><a class="github-badge" target="_blank" href="https://anzhiy.cn/" style="margin-inline:5px" data-title="本站使用AnZhiYu主题" title="本站使用AnZhiYu主题"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://pan.anzhiy.cn/d/anzhiyu/svg/Theme-AnZhiYu-2E67D3.svg" alt="本站使用AnZhiYu主题"/></a><a class="github-badge" target="_blank" href="https://www.dogecloud.com/" style="margin-inline:5px" data-title="本站使用多吉云为静态资源提供CDN加速" title="本站使用多吉云为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg" alt="本站使用多吉云为静态资源提供CDN加速"/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" data-title="本站项目由Github托管" title="本站项目由Github托管"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg" alt="本站项目由Github托管"/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" data-title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg" alt="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"/></a></p></div></footer><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" src="data:image/jpeg;base64,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"/><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>const loadingPercentage = document.getElementById("loading-percentage");
+let loadingPercentageTimer = setInterval(function() {
+  var progressBar = document.querySelector(".pace-progress");
+  if (!progressBar) return
+  var currentValue = progressBar.getAttribute("data-progress-text");
+  if (currentValue !== loadingPercentage.textContent) {
+    loadingPercentage.textContent = currentValue;
+    if (currentValue === "100%") {
+      clearInterval(loadingPercentageTimer);
+    }
+  }
+}, 100);
+const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/progress_bar/progress_bar.css"/><script async="async" src="https://npm.elemecdn.com/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/author.jpeg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">5</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child" style="left:-79px;"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child" style="left:17px;"><li><a class="site-page child faa-parent animated-hover" href="/movies/"><i class="fas fa-video faa-tada"></i><span> 电影</span></a></li></ul></div></div></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><a id="switch_commentBarrage" href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕"><i class="anzhiyufont anzhiyu-icon-danmu"></i></a><button id="center-console" type="button" title="中控台"><i class="anzhiyufont anzhiyu-icon-fish"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><div id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()">播放音乐</div><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random"></meting-js></div><div id="console"><div class="close-btn" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-xmark" style="font-size: 35px;"></i></div><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="/images/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="wechat" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/qrcode-weichat.png"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/images/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="alipay" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/images/qrcode-alipay.png"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments" onclick="anzhiyu.hideConsole()"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> <span>最新评论</span></span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags" onclick="anzhiyu.hideConsole()"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Hexo/" style="font-size: 1.15em; color: rgb(20, 161, 185)">Hexo<sup>1</sup></a><a href="/tags/JavaScript/" style="font-size: 1.45em; color: rgb(112, 172, 41)">JavaScript<sup>3</sup></a><a href="/tags/markdown/" style="font-size: 1.15em; color: rgb(42, 121, 65)">markdown<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history" onclick="anzhiyu.hideConsole()"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">五月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">四月 2023</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" onclick="rm.switchDarkMode()" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item on" id="consoleCommentBarrage" onclick="anzhiyu.switchCommentBarrage()" title="热评开关"><a class="commentBarrage"><i class="anzhiyufont anzhiyu-icon-message"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div id="he-plugin-simple"></div><script>var WIDGET = {
+  "CONFIG": {
+    "modules": "0124",
+    "background": "2",
+    "tmpColor": "FFFFFF",
+    "tmpSize": "16",
+    "cityColor": "FFFFFF",
+    "citySize": "16",
+    "aqiColor": "E8D87B",
+    "aqiSize": "16",
+    "weatherIconSize": "24",
+    "alertIconSize": "18",
+    "padding": "10px 10px 10px 10px",
+    "shadow": "0",
+    "language": "auto",
+    "borderRadius": "20",
+    "fixed": "true",
+    "vertical": "top",
+    "horizontal": "left",
+    "left": "20",
+    "top": "7.1",
+    "key": "df245676fb434a0691ead1c63341cd94"
+  }
+}
+</script><link rel="stylesheet" href="https://widget.qweather.net/simple/static/css/he-simple.css?v=1.4.0"/><script src="https://widget.qweather.net/simple/static/js/he-simple.js?v=1.4.0"></script><div><script src="https://npm.elemecdn.com/hexo-theme-anzhiyu@1.1.8/source/js/utils.js"></script><script src="https://npm.elemecdn.com/hexo-theme-anzhiyu@1.1.8/source/js/main.js"></script><script src="https://npm.elemecdn.com/hexo-theme-anzhiyu@1.1.8/source/js/tw_cn.js"></script><script src="https://npm.elemecdn.com/@fancyapps/ui@4.0.31/dist/fancybox.umd.js"></script><script src="https://npm.elemecdn.com/instant.page@5.1.1/instantpage.js" type="module"></script><script src="https://npm.elemecdn.com/vanilla-lazyload@17.3.1/dist/lazyload.iife.min.js"></script><script src="https://npm.elemecdn.com/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  console.log(1)
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2023 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      "color:#3b70fc",
+      "",
+      "color:#3b70fc",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 字号楼 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.1/bubble/bubble.js"></script><script>var visitorMail = "visitor@anzhiy.cn";</script><script>//动态标题
+let leaveTitle = 'w(ﾟДﾟ)w 不要走！再看看嘛！';
+let backTitle = '♪(^∇^*)欢迎肥来！';
+let OriginTitile = document.title
+let titleTime
+document.addEventListener('visibilitychange', function () {
+  if (document.hidden) {
+    //离开当前页面时标签显示内容
+    document.title = leaveTitle
+    clearTimeout(titleTime)
+  } else {
+    //返回当前页面时标签显示内容
+    document.title = backTitle + OriginTitile
+    //两秒后变回正常标题
+    titleTime = setTimeout(function () {
+      document.title = OriginTitile
+    }, 2000)
+  }
+})</script><script data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/catalog-bar/catalog-bar.js"></script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/categoryBar/categoryBar.js"></script><script async data-pjax src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><script>// 初始化函数
+let rm = {};
+
+//禁止图片拖拽
+let imgElements = document.getElementsByTagName("img");
+for (let i = 0; i < imgElements.length; i++) {
+  imgElements[i].addEventListener("dragstart", function (event) {
+    event.preventDefault();
+  });
+}
+
+// 显示菜单
+rm.showRightMenu = function (isTrue, x = 0, y = 0) {
+  console.info(x, y)
+  let rightMenu = document.getElementById("rightMenu");
+  rightMenu.style.top = x + "px";
+  rightMenu.style.left = y + "px";
+  if (isTrue) {
+    rightMenu.style.display = "block";
+    stopMaskScroll();
+  } else {
+    rightMenu.style.display = "none";
+  }
+};
+
+// 隐藏菜单
+rm.hideRightMenu = function () {
+  rm.showRightMenu(false);
+  let rightMenuMask = document.querySelector("#rightmenu-mask");
+  rightMenuMask.style.display = "none";
+};
+
+// 尺寸
+let rmWidth = document.getElementById("rightMenu").offsetWidth;
+let rmHeight = document.getElementById("rightMenu").offsetHeight;
+
+// 重新定义尺寸
+rm.reloadrmSize = function () {
+  rightMenu.style.visibility = "hidden";
+  rightMenu.style.display = "block";
+  // 获取宽度和高度
+  rmWidth = document.getElementById("rightMenu").offsetWidth;
+  rmHeight = document.getElementById("rightMenu").offsetHeight;
+  rightMenu.style.visibility = "visible";
+};
+
+// 获取点击的href
+let domhref = "";
+let domImgSrc = "";
+let globalEvent = null;
+
+// 监听右键初始化
+window.oncontextmenu = function (event) {
+  if (document.body.clientWidth > 768) {
+    let pageX = event.clientX + 10; //加10是为了防止显示时鼠标遮在菜单上
+    let pageY = event.clientY;
+
+    //其他额外菜单
+    const $rightMenuOther = document.querySelector(".rightMenuOther");
+    const $rightMenuPlugin = document.querySelector(".rightMenuPlugin");
+    const $rightMenuCopyText = document.querySelector("#menu-copytext");
+    const $rightMenuPasteText = document.querySelector("#menu-pastetext");
+    const $rightMenuCommentText = document.querySelector("#menu-commenttext");
+    const $rightMenuNewWindow = document.querySelector("#menu-newwindow");
+    const $rightMenuNewWindowImg = document.querySelector("#menu-newwindowimg");
+    const $rightMenuCopyLink = document.querySelector("#menu-copylink");
+    const $rightMenuCopyImg = document.querySelector("#menu-copyimg");
+    const $rightMenuDownloadImg = document.querySelector("#menu-downloadimg");
+    const $rightMenuSearch = document.querySelector("#menu-search");
+    const $rightMenuSearchBaidu = document.querySelector("#menu-searchBaidu");
+    const $rightMenuMusicToggle = document.querySelector("#menu-music-toggle");
+    const $rightMenuMusicBack = document.querySelector("#menu-music-back");
+    const $rightMenuMusicForward = document.querySelector("#menu-music-forward");
+    const $rightMenuMusicPlaylist = document.querySelector("#menu-music-playlist");
+    const $rightMenuMusicCopyMusicName = document.querySelector("#menu-music-copyMusicName");
+
+    let href = event.target.href;
+    let imgsrc = event.target.currentSrc;
+
+    // 判断模式 扩展模式为有事件
+    let pluginMode = false;
+    $rightMenuOther.style.display = "block";
+    globalEvent = event;
+
+    // 检查是否需要复制 是否有选中文本
+    if (selectTextNow && window.getSelection()) {
+      pluginMode = true;
+      $rightMenuCopyText.style.display = "block";
+      $rightMenuCommentText.style.display = "block";
+      $rightMenuSearch.style.display = "block";
+      $rightMenuSearchBaidu.style.display = "block";
+    } else {
+      $rightMenuCopyText.style.display = "none";
+      $rightMenuCommentText.style.display = "none";
+      $rightMenuSearchBaidu.style.display = "none";
+      $rightMenuSearch.style.display = "none";
+    }
+
+    //检查是否右键点击了链接a标签
+    if (href) {
+      pluginMode = true;
+      $rightMenuNewWindow.style.display = "block";
+      $rightMenuCopyLink.style.display = "block";
+      domhref = href;
+    } else {
+      $rightMenuNewWindow.style.display = "none";
+      $rightMenuCopyLink.style.display = "none";
+    }
+
+    //检查是否需要复制图片
+    if (imgsrc) {
+      pluginMode = true;
+      $rightMenuCopyImg.style.display = "block";
+      $rightMenuDownloadImg.style.display = "block";
+      $rightMenuNewWindowImg.style.display = "block";
+      document.getElementById("rightMenu").style.width="12rem"
+      domImgSrc = imgsrc;
+    } else {
+      $rightMenuCopyImg.style.display = "none";
+      $rightMenuDownloadImg.style.display = "none";
+      $rightMenuNewWindowImg.style.display = "none";
+    }
+
+    // 判断是否为输入框
+    if (event.target.tagName.toLowerCase() === "input" || event.target.tagName.toLowerCase() === "textarea") {
+      pluginMode = true;
+      $rightMenuPasteText.style.display = "block";
+    } else {
+      $rightMenuPasteText.style.display = "none";
+    }
+    const navMusicEl = document.querySelector("#nav-music");
+    //判断是否是音乐
+    if (navMusicEl && navMusicEl.contains(event.target)) {
+      pluginMode = true;
+      $rightMenuMusicToggle.style.display = "block";
+      $rightMenuMusicBack.style.display = "block";
+      $rightMenuMusicForward.style.display = "block";
+      $rightMenuMusicPlaylist.style.display = "block";
+      $rightMenuMusicCopyMusicName.style.display = "block";
+    } else {
+      $rightMenuMusicToggle.style.display = "none";
+      $rightMenuMusicBack.style.display = "none";
+      $rightMenuMusicForward.style.display = "none";
+      $rightMenuMusicPlaylist.style.display = "none";
+      $rightMenuMusicCopyMusicName.style.display = "none";
+    }
+
+    // 如果不是扩展模式则隐藏扩展模块
+    if (pluginMode) {
+      $rightMenuOther.style.display = "none";
+      $rightMenuPlugin.style.display = "block";
+    } else {
+      $rightMenuPlugin.style.display = "none";
+    }
+
+    rm.reloadrmSize();
+
+    // 鼠标默认显示在鼠标右下方，当鼠标靠右或靠下时，将菜单显示在鼠标左方\上方
+    if (pageX + rmWidth > window.innerWidth) {
+      pageX -= rmWidth + 10;
+    }
+    if (pageY + rmHeight > window.innerHeight) {
+      pageY -= pageY + rmHeight - window.innerHeight;
+    }
+
+    rm.showRightMenu(true, pageY, pageX);
+    document.getElementById("rightmenu-mask").style.display = "flex";
+    return false;
+  }
+};
+
+// 下载图片状态
+rm.downloadimging = false;
+
+// 复制图片到剪贴板
+rm.writeClipImg = function (imgsrc) {
+  console.log("按下复制");
+  rm.hideRightMenu();
+  anzhiyu.snackbarShow("正在下载中，请稍后", false, 10000);
+  if (rm.downloadimging == false) {
+    rm.downloadimging = true;
+    setTimeout(function () {
+      copyImage(imgsrc);
+      anzhiyu.snackbarShow("复制成功！图片已添加盲水印，请遵守版权协议");
+      rm.downloadimging = false;
+    }, "10000");
+  }
+};
+
+function imageToBlob(imageURL) {
+  const img = new Image();
+  const c = document.createElement("canvas");
+  const ctx = c.getContext("2d");
+  img.crossOrigin = "";
+  img.src = imageURL;
+  return new Promise(resolve => {
+    img.onload = function () {
+      c.width = this.naturalWidth;
+      c.height = this.naturalHeight;
+      ctx.drawImage(this, 0, 0);
+      c.toBlob(
+        blob => {
+          // here the image is a blob
+          resolve(blob);
+        },
+        "image/png",
+        0.75
+      );
+    };
+  });
+}
+
+async function copyImage(imageURL) {
+  const blob = await imageToBlob(imageURL);
+  const item = new ClipboardItem({ "image/png": blob });
+  navigator.clipboard.write([item]);
+}
+
+rm.switchDarkMode = function () {
+  // Switch Between Light And Dark Mode
+  const nowMode = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+  if (nowMode === "light") {
+    activateDarkMode();
+    saveToLocal.set("theme", "dark", 2);
+    GLOBAL_CONFIG.Snackbar !== undefined && anzhiyu.snackbarShow(GLOBAL_CONFIG.Snackbar.day_to_night);
+    document.querySelector(".menu-darkmode-text").textContent = "浅色模式";
+  } else {
+    activateLightMode();
+    saveToLocal.set("theme", "light", 2);
+    GLOBAL_CONFIG.Snackbar !== undefined && anzhiyu.snackbarShow(GLOBAL_CONFIG.Snackbar.night_to_day);
+    document.querySelector(".menu-darkmode-text").textContent = "深色模式";
+  }
+  // handle some cases
+  typeof runMermaid === "function" && window.runMermaid();
+  rm.hideRightMenu();
+  anzhiyu.darkModeStatus();
+};
+
+rm.copyUrl = function (id) {
+  const input = document.createElement("input"); // Create a new <input> element
+  input.id = "copyVal"; // Set the id of the new element to "copyVal"
+  document.body.appendChild(input); // Append the new element to the end of the <body> element
+  
+  const text = id;
+  input.value = text;
+  input.select();
+  input.setSelectionRange(0, input.value.length);
+  document.execCommand("copy");
+  
+  input.remove(); // Remove the <input> element from the DOM
+};
+
+function stopMaskScroll() {
+  if (document.getElementById("rightmenu-mask")) {
+    let xscroll = document.getElementById("rightmenu-mask");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      false
+    );
+  }
+  if (document.getElementById("rightMenu")) {
+    let xscroll = document.getElementById("rightMenu");
+    xscroll.addEventListener(
+      "mousewheel",
+      function (e) {
+        //阻止浏览器默认方法
+        rm.hideRightMenu();
+        // e.preventDefault();
+      },
+      false
+    );
+  }
+}
+
+rm.rightmenuCopyText = function (txt) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(txt);
+  }
+  rm.hideRightMenu();
+};
+
+rm.copyPageUrl = function () {
+  var url = window.location.href;
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制本页链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+rm.sharePage = function () {
+  var content = window.location.href;
+  rm.copyUrl(url);
+  anzhiyu.snackbarShow("复制本页链接地址成功", false, 2000);
+  rm.hideRightMenu();
+};
+
+// 复制当前选中文本
+var selectTextNow = "";
+document.onmouseup = document.ondblclick = selceText;
+
+function selceText() {
+  var txt;
+  if (document.selection) {
+    txt = document.selection.createRange().text;
+  } else {
+    txt = window.getSelection().toString();
+  }
+  selectTextNow = txt !== "" ? txt : "";
+}
+
+// 读取剪切板
+rm.readClipboard = function () {
+  if (navigator.clipboard) {
+    navigator.clipboard.readText().then(clipText => rm.insertAtCaret(globalEvent.target, clipText));
+  }
+};
+
+// 粘贴文本到焦点
+rm.insertAtCaret = function (elemt, value) {
+  const startPos = elemt.selectionStart,
+    endPos = elemt.selectionEnd;
+  if (document.selection) {
+    elemt.focus();
+    var sel = document.selection.createRange();
+    sel.text = value;
+    elemt.focus();
+  } else {
+    if (startPos || startPos == "0") {
+      var scrollTop = elemt.scrollTop;
+      elemt.value = elemt.value.substring(0, startPos) + value + elemt.value.substring(endPos, elemt.value.length);
+      elemt.focus();
+      elemt.selectionStart = startPos + value.length;
+      elemt.selectionEnd = startPos + value.length;
+      elemt.scrollTop = scrollTop;
+    } else {
+      elemt.value += value;
+      elemt.focus();
+    }
+  }
+};
+
+//粘贴文本
+rm.pasteText = function () {
+  const result = rm.readClipboard() || "";
+  rm.hideRightMenu();
+};
+
+//引用到评论
+rm.rightMenuCommentText = function (txt) {
+  rm.hideRightMenu();
+  const postCommentDom = document.getElementById("post-comment");
+  var domTop = postCommentDom.offsetTop;
+  window.scrollTo(0, domTop - 80);
+  if (txt == "undefined" || txt == "null") txt = "好棒！";
+  function setText() {
+    setTimeout(() => {
+      var input = document.getElementsByClassName("el-textarea__inner")[0];
+      if (!input) setText();
+      let evt = document.createEvent("HTMLEvents");
+      evt.initEvent("input", true, true);
+      let inputValue = replaceAll(txt, "\n", "\n> ");
+      input.value = "> " + inputValue + "\n\n";
+      input.dispatchEvent(evt);
+      input.focus();
+      input.setSelectionRange(-1, -1);
+      if (document.getElementById("comment-tips")) {
+        document.getElementById("comment-tips").classList.add("show");
+      }
+    }, 100);
+  }
+  setText();
+};
+
+//替换所有内容
+function replaceAll(string, search, replace) {
+  return string.split(search).join(replace);
+}
+
+// 百度搜索
+rm.searchBaidu = function () {
+  anzhiyu.snackbarShow("即将跳转到百度搜索", false, 2000);
+  setTimeout(function () {
+    window.open("https://www.baidu.com/s?wd=" + selectTextNow);
+  }, "2000");
+  rm.hideRightMenu();
+};
+
+//分享链接
+rm.copyLink = function () {
+  rm.rightmenuCopyText(domhref);
+  anzhiyu.snackbarShow("已复制链接地址");
+};
+
+function addRightMenuClickEvent() {
+  // 添加点击事件
+  document.getElementById("menu-backward").addEventListener("click", function () {
+  window.history.back();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-forward").addEventListener("click", function () {
+    window.history.forward();
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-refresh").addEventListener("click", function () {
+    window.location.reload();
+  });
+
+  document.getElementById("menu-top").addEventListener("click", function () {
+    anzhiyu.scrollToDest(0, 500);
+    rm.hideRightMenu();
+  });
+
+  const menuLinks = document.querySelectorAll(".menu-link");
+  menuLinks.forEach(function (link) {
+    link.addEventListener("click", rm.hideRightMenu);
+  });
+
+  document.getElementById("menu-darkmode").addEventListener("click", rm.switchDarkMode);
+
+  document.getElementById("menu-home") && document.getElementById("menu-home").addEventListener("click", function () {
+    window.location.href = window.location.origin;
+  });
+
+  document.getElementById("menu-randomPost").addEventListener("click", function () {
+    toRandomPost();
+  });
+
+  document.getElementById("menu-commentBarrage").addEventListener("click", anzhiyu.switchCommentBarrage);
+
+  document.getElementById("rightmenu-mask").addEventListener("click", rm.hideRightMenu);
+
+  document.getElementById("rightmenu-mask").addEventListener("contextmenu", function (event) {
+    rm.hideRightMenu();
+    event.preventDefault(); // Prevent the default context menu from appearing
+  });
+
+  document.getElementById("menu-copy").addEventListener("click", rm.copyPageUrl);
+
+  document.getElementById("menu-pastetext").addEventListener("click", rm.pasteText);
+
+  document.getElementById("menu-copytext").addEventListener("click", function () {
+    rm.rightmenuCopyText(selectTextNow);
+    anzhiyu.snackbarShow("复制成功，复制和转载请标注本文地址");
+  });
+
+  document.getElementById("menu-commenttext").addEventListener("click", function () {
+    rm.rightMenuCommentText(selectTextNow);
+  });
+
+  document.getElementById("menu-newwindow").addEventListener("click", function () {
+    window.open(domhref);
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copylink").addEventListener("click", rm.copyLink);
+
+  document.getElementById("menu-downloadimg").addEventListener("click", function () {
+    anzhiyu.downloadImage(domImgSrc, "anzhiyu");
+  });
+
+  document.getElementById("menu-newwindowimg").addEventListener("click", function () {
+    window.open(domImgSrc);
+    rm.hideRightMenu();
+  });
+
+  document.getElementById("menu-copyimg").addEventListener("click", function () {
+    rm.writeClipImg(domImgSrc);
+  });
+
+  document.getElementById("menu-searchBaidu").addEventListener("click", rm.searchBaidu);
+
+  //音乐
+  document.getElementById("menu-music-toggle").addEventListener("click", anzhiyu.musicToggle);
+
+  document.getElementById("menu-music-back").addEventListener("click", anzhiyu.musicSkipBack);
+
+  document.getElementById("menu-music-forward").addEventListener("click", anzhiyu.musicSkipForward);
+
+  document.getElementById("menu-music-copyMusicName").addEventListener("click", function () {
+    rm.rightmenuCopyText(anzhiyu.musicGetName());
+    anzhiyu.snackbarShow("复制歌曲名称成功", false, 3000);
+  });
+
+}
+
+addRightMenuClickEvent();</script><script data-pjax>var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+var pageHeaderEl = document.getElementById("page-header");
+var navMusicEl = document.getElementById("nav-music");
+var consoleEl = document.getElementById("console");
+// 已随机的歌曲
+var selectRandomSong = [];
+// 音乐默认声音大小
+var musicVolume = 0.8;
+// 是否切换了周杰伦音乐列表
+var changeMusicListFlag = false;
+// 当前默认播放列表
+var defaultPlayMusicList = [];
+
+document.getElementById("page-name").innerText = document.title.split(" | 安知鱼")[0];
+anzhiyu.initIndexEssay();
+anzhiyu.changeTimeInEssay();
+anzhiyu.removeBodyPaceClass();
+anzhiyu.qrcodeCreate();
+anzhiyu.changeTimeInAlbumDetail();
+anzhiyu.reflashEssayWaterFall();
+anzhiyu.sayhi();
+anzhiyu.stopImgRightDrag();
+anzhiyu.addNavBackgroundInit();
+anzhiyu.setValueToBodyType();
+
+anzhiyu.getCustomPlayList();
+anzhiyu.addEventListenerConsoleMusicList(false);</script><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.6/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://npm.elemecdn.com/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://npm.elemecdn.com/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+  window.anzhiyuScrollFnToDo && window.removeEventListener('scroll', anzhiyuScrollFnToDo)
+
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script></div></body></html>
